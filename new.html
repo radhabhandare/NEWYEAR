@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎆 Happy New Year 2026 🎆</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --sapphire: #0F52BA;
+            --emerald: #50C878;
+            --ruby: #E0115F;
+            --diamond: #B9F2FF;
+            --silver: #C0C0C0;
+            --midnight-blue: #191970;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a4a 50%, #2a2a6a 100%);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        /* Animated Background */
+        .particle-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at center, #000428 0%, #004e92 100%);
+        }
+        
+        /* Main Container */
+        .main-container {
+            position: relative;
+            z-index: 10;
+            padding: 30px 15px;
+        }
+        
+        /* Header */
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            background: linear-gradient(45deg, var(--gold), var(--diamond), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            animation: titleGlow 3s infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+            100% { text-shadow: 0 0 40px rgba(185, 242, 255, 0.5), 0 0 60px rgba(80, 200, 120, 0.3); }
+        }
+        
+        .year-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 800;
+            color: transparent;
+            background: linear-gradient(45deg, var(--gold) 30%, var(--diamond) 50%, var(--emerald) 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: numberFloat 3s ease-in-out infinite;
+            margin: 20px 0;
+        }
+        
+        @keyframes numberFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Enhanced Cards */
+        .message-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .message-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold), var(--diamond), var(--sapphire), var(--emerald));
+            border-radius: 27px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        .message-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .message-card:hover::before {
+            opacity: 1;
+            animation: borderRotate 3s linear infinite;
+        }
+        
+        @keyframes borderRotate {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            color: var(--diamond);
+            margin-bottom: 25px;
+            text-align: center;
+            animation: iconPulse 2s infinite alternate;
+        }
+        
+        @keyframes iconPulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+        
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--diamond), transparent);
+        }
+        
+        .marathi-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #f0f0f0;
+        }
+        
+        .english-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #f0f0f0;
+        }
+        
+        /* Simple Signature */
+        .signature-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+        }
+        
+        .signature {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 25px;
+            border-radius: 50px;
+        }
+        
+        .signature-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+        
+        .signature-heart {
+            font-size: 2rem;
+            color: var(--ruby);
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        
+        
+        /* Countdown Timer */
+        .countdown-section {
+            margin-bottom: 50px;
+        }
+        
+        .countdown-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 40px;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--diamond), var(--sapphire), var(--emerald), var(--gold));
+            animation: progressBar 3s linear infinite;
+        }
+        
+        @keyframes progressBar {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .countdown-unit {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-unit:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+            border-color: var(--gold);
+        }
+        
+        .unit-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+            margin-bottom: 10px;
+        }
+        
+        .unit-label {
+            font-size: 1.3rem;
+            color: var(--diamond);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Celebration Gallery */
+        .gallery-section {
+            margin: 40px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            border-color: var(--gold);
+        }
+        
+        .gallery-icon {
+            font-size: 5rem;
+            color: var(--gold);
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Fireworks */
+        .firework {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fff;
+            z-index: 5;
+        }
+        
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .main-title { font-size: 3.5rem; }
+            .year-number { font-size: 4.5rem; }
+            .signature-name { font-size: 2rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .year-number { font-size: 3.5rem; }
+            .card-title { font-size: 1.8rem; }
+            .marathi-text { font-size: 1.3rem; }
+            .countdown-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--gold), var(--diamond));
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particle-background" id="particleBackground"></div>
+    
+    <!-- Fireworks Container -->
+    <div id="fireworksContainer"></div>
+    
+    <!-- Main Content -->
+    <div class="container main-container">
+        <!-- Header -->
+        <header class="header-section animate__animated animate__fadeInDown">
+            <h1 class="main-title">Happy New Year 2026</h1>
+            <div class="year-number">2026</div>
+            <p class="lead" style="color: var(--diamond); font-size: 1.5rem; font-weight: 600;">
+                <i class="fas fa-star me-2"></i> Wishing You Love, Joy & Prosperity <i class="fas fa-star ms-2"></i>
+            </p>
+        </header>
+        
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <div class="countdown-card animate__animated animate__zoomIn">
+                <h2 class="text-center mb-4" style="color: var(--diamond); font-family: 'Playfair Display', serif;">
+                    <i class="fas fa-clock me-2"></i> Countdown to New Beginnings
+                </h2>
+                <div class="countdown-grid">
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="days">365</div>
+                        <div class="unit-label">Days</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="hours">23</div>
+                        <div class="unit-label">Hours</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="minutes">59</div>
+                        <div class="unit-label">Minutes</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="seconds">59</div>
+                        <div class="unit-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Message Cards -->
+        <div class="row g-4">
+            <!-- Marathi Message Card -->
+            <div class="col-lg-6">
+                <div class="message-card animate__animated animate__fadeInLeft">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="card-title">नववर्षाच्या हार्दिक शुभेच्छा! 🎉</h3>
+                    <div class="marathi-text">
+                        हा नवीन वर्ष तुम्हाला आरोग्य, सुख, आनंद आणि प्रत्येक क्षण हसण्याची प्रेरणा घेऊन येवो.<br><br>
+                        2025 मधल्या सर्व अडचणी आणि दुःख विसरून, नवीन सुरुवातीसाठी तयार व्हा.<br><br>
+                        हसत रहा, आनंदी रहा, आणि प्रत्येक क्षणाचा अनुभव घ्या!
+                    </div>
+                    
+                    <!-- Simple Signature -->
+                    <div class="signature-section">
+                        <div class="signature">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- English Message Card -->
+            <div class="col-lg-6">
+                <div class="message-card animate__animated animate__fadeInRight">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="card-title">🌟 Happy New Year 2026! 🌟</h3>
+                    <div class="english-text">
+                        <p>As we welcome this brand-new year, may it bring you and your family health, happiness, love, and prosperity. Leave behind all the worries and challenges of 2025, and step forward with hope, positivity, and a fresh start.</p>
+                        
+                        <p>May your days be filled with laughter, your heart with peace, and your mind with inspiration. Cherish every moment with your loved ones, create beautiful memories, and strengthen the bonds of love and togetherness.</p>
+                        
+                        <p>May 2026 open doors to new opportunities, success, and joyful experiences—for you and your family. Celebrate every small achievement, embrace every moment, and let every day bring a reason to smile.</p>
+                        
+                        <p class="text-center mt-4" style="color: var(--gold); font-weight: 600; font-size: 1.3rem;">
+                            🥂 Wishing you and your family a year full of joy, good health, love, and unforgettable memories! 🥂
+                        </p>
+                    </div>
+                    
+                    <!-- Simple Signature -->
+                    <div class="signature-section">
+                        <div class="signature">
+                            <span class="signature-name">From Radha</span>
+                            <span class="signature-heart">❤️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+        <!-- Final Wishes Card -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-10">
+                <div class="message-card animate__animated animate__fadeInUp">
+                    <div class="card-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="card-title">✨ Special New Year Wishes ✨</h3>
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-4">
+                            <div class="text-center p-4" style="background: rgba(255, 215, 0, 0.1); border-radius: 20px;">
+                                <i class="fas fa-heart" style="color: var(--ruby); font-size: 2.5rem; margin-bottom: 15px;"></i>
+                                <h5 style="color: var(--diamond);">Health & Happiness</h5>
+                                <p>May every day bring you joy and good health</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4" style="background: rgba(185, 242, 255, 0.1); border-radius: 20px;">
+                                <i class="fas fa-trophy" style="color: var(--gold); font-size: 2.5rem; margin-bottom: 15px;"></i>
+                                <h5 style="color: var(--diamond);">Success & Prosperity</h5>
+                                <p>May success follow all your endeavors</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4" style="background: rgba(80, 200, 120, 0.1); border-radius: 20px;">
+                                <i class="fas fa-users" style="color: var(--emerald); font-size: 2.5rem; margin-bottom: 15px;"></i>
+                                <h5 style="color: var(--diamond);">Love & Togetherness</h5>
+                                <p>May your bonds with loved ones strengthen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="music-btn" id="playBtn">
+            <i class="fas fa-play"></i>
+        
+        
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('January 1, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+            
+            if(timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(3, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+        }
+        
+        // Create particle background
+        function createParticles() {
+            const background = document.getElementById('particleBackground');
+            const particleCount = 60;
+            
+            for(let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.borderRadius = '50%';
+                particle.style.opacity = '0.6';
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                
+                // Random color from theme
+                const colors = ['#FFD700', '#B9F2FF', '#50C878', '#0F52BA'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.left = `${x}%`;
+                particle.style.top = `${y}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.backgroundColor = color;
+                particle.style.boxShadow = `0 0 10px ${color}`;
+                
+                background.appendChild(particle);
+            }
+        }
+        
+        // Fireworks System
+        function createFirework(x, y) {
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+            
+            // Random color from theme
+            const colors = ['#FFD700', '#B9F2FF', '#50C878', '#0F52BA', '#E0115F'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            const size = Math.random() * 10 + 5;
+            
+            firework.style.left = `${x}px`;
+            firework.style.top = `${y}px`;
+            firework.style.width = `${size}px`;
+            firework.style.height = `${size}px`;
+            firework.style.backgroundColor = color;
+            firework.style.boxShadow = `0 0 20px ${color}, 0 0 40px ${color}`;
+            
+            document.getElementById('fireworksContainer').appendChild(firework);
+            
+            // Create explosion particles
+            const particleCount = 20;
+            for(let i = 0; i < particleCount; i++) {
+                setTimeout(() => {
+                    createFireworkParticle(x, y, color);
+                }, i * 30);
+            }
+            
+            // Animate main firework
+            firework.animate([
+                { transform: 'scale(0)', opacity: 1 },
+                { transform: 'scale(1.5)', opacity: 0 }
+            ], {
+                duration: 800,
+                easing: 'ease-out'
+            });
+            
+            setTimeout(() => firework.remove(), 800);
+        }
+        
+        function createFireworkParticle(x, y, color) {
+            const particle = document.createElement('div');
+            particle.classList.add('firework');
+            
+            const angle = Math.random() * Math.PI * 2;
+            const distance = Math.random() * 100 + 50;
+            const size = Math.random() * 6 + 2;
+            
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.backgroundColor = color;
+            particle.style.boxShadow = `0 0 10px ${color}`;
+            
+            document.getElementById('fireworksContainer').appendChild(particle);
+            
+            // Animate particle
+            particle.animate([
+                { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                { transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`, opacity: 0 }
+            ], {
+                duration: 1200,
+                easing: 'ease-out'
+            });
+            
+            setTimeout(() => particle.remove(), 1200);
+        }
+        
+        // Launch random fireworks
+        function launchRandomFirework() {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            createFirework(x, y);
+        }
+        
+        // Click to create fireworks
+        document.addEventListener('click', function(e) {
+            for(let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const offsetX = (Math.random() - 0.5) * 50;
+                    const offsetY = (Math.random() - 0.5) * 50;
+                    createFirework(e.clientX + offsetX, e.clientY + offsetY);
+                }, i * 100);
+            }
+        });
+        
+        // Music Player
+        const audio = document.getElementById('newYearAudio');
+        const playBtn = document.getElementById('playBtn');
+        let isPlaying = false;
+        
+        // Auto-play after user interaction
+        document.addEventListener('click', function initAudio() {
+            if(!isPlaying) {
+                audio.volume = 0.5;
+                audio.play().then(() => {
+                    isPlaying = true;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    
+                    // Start auto-fireworks when music plays
+                    setInterval(launchRandomFirework, 2000);
+                }).catch(e => console.log("Audio play prevented:", e));
+            }
+            document.removeEventListener('click', initAudio);
+        });
+        
+        playBtn.addEventListener('click', function() {
+            if(isPlaying) {
+                audio.pause();
+                this.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                audio.play();
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Initialize
+        createParticles();
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Initial fireworks
+        for(let i = 0; i < 5; i++) {
+            setTimeout(() => launchRandomFirework(), i * 500);
+        }
+        
+        // Add hover effects to gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.gallery-icon i');
+                icon.style.animation = 'iconFloat 1s ease-in-out infinite';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.gallery-icon i');
+                icon.style.animation = 'iconFloat 3s ease-in-out infinite';
+            });
+        });
+    </script>
+</body>
+</html>
